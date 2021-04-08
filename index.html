@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interventions</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular.min.js"></script>                        
+        <script src="https://code.angularjs.org/1.7.0/angular-route.min.js"></script>
+        <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <script src="Intervention.js"></script>
+        <style>
+            th {
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #4CAF50;
+              color: white;
+            }
+            
+            td,
+            th {
+              border: 1px solid #ddd;
+              padding: 8px;
+            }
+            
+            body {
+              background-color: rgb(255, 255, 255);
+            }
+            
+            active {
+              background-color: orange;
+            }
+          </style>
+    </head>
+    <body ng-app="TpInterventions" >
+        <div ng-view ></div>          
+    </body>
+
+</html>

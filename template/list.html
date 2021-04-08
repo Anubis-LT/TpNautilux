@@ -1,0 +1,21 @@
+<div class="container" ng-controller="InterventCtrl">
+    <h1>Liste des interventions</h1>
+    <p><a ng-click="clickMe(0)">+ Ajouter une intervention</a></p>
+    <table class="table table-hover">
+      <tr>
+        <th>Date</th>
+        <th>Libellé</th>
+        <th>Intervenant</th>
+        <th>Statut</th>
+      </tr>
+      <tr ng-repeat="inter in interventions | orderBy:'-dateIntervention'" ng-class="{active : isSelected(inter)}">
+        <td>{{inter.dateIntervention }}</td>
+        <td><a ng-click="clickMe(inter)">{{inter.libelle}}</a></td>
+        <td>{{inter.nameStaff}}</td>
+        <td>{{inter.statut}}</td>
+      </tr>
+    </table>
+    <p>Gregory Le Terte for Nautilux 2021</p>
+  </div>
+
+    

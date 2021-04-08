@@ -1,0 +1,40 @@
+<div  ng-controller="InterventCtrl">
+    <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">{{p.text}}</h4>
+      </div>
+      <div class="modal-body">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>                     
+                    
+                        <form name="form" novalidate>
+                            Titre :<br><input type="text" ng-model-options="{ updateOn: 'blur' }" ng-model='p.libelle'><br>
+                            Intervenant :<br><input type="text" ng-model='p.nameStaff'><br>
+                            Adresse de l'intervention :<br><input type="text" ng-model='p.address'><br>
+                            Date de l'intervention :<br><input type="text" placeholder="JJ-MM-AAAA" ng-model='p.dateIntervention'><br>
+                            
+                            Description de l'intervention :<br><input type="text" ng-model='p.description'><br>
+                           
+                          
+                          <br><br>
+                          {{ p.errortext}}
+                          <button ng-click="save()">Sauvegarder</button>
+                          <button ng-click="remove($index)">Supprimer intervention</button>
+                        </form>
+                        
+                        
+                      </div>
+            
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" ng-click="submit()">Save</button>
+        <button class="btn btn-default" ng-click="quit()">Fermer</button>
+      </div>
+
+   
+</div>
+
+
